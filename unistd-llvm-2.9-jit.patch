@@ -1,0 +1,11 @@
+diff -u -r llvm-2.9/lib/ExecutionEngine/JIT/Intercept.cpp src/lib/ExecutionEngine/JIT/Intercept.cpp
+--- llvm-2.9/lib/ExecutionEngine/JIT/Intercept.cpp	2010-11-29 18:16:10.000000000 +0000
++++ src/lib/ExecutionEngine/JIT/Intercept.cpp	2013-09-27 12:11:02.464085889 +0100
+@@ -50,6 +50,7 @@
+ #if defined(__linux__)
+ #if defined(HAVE_SYS_STAT_H)
+ #include <sys/stat.h>
++#include <unistd.h>
+ #endif
+ #include <fcntl.h>
+ /* stat functions are redirecting to __xstat with a version number.  On x86-64 
