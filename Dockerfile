@@ -63,6 +63,7 @@ RUN cd /opt/workdir/afl &&  sed -i -e s,^BIN_PATH.*,BIN_PATH=/opt/afl/,g -e s,^H
 RUN cd /opt/workdir && git clone http://haltp.org/git/radamsa.git
 # cache the owl-lisp step, just in case the line after fails
 RUN cd /opt/workdir/radamsa && make get-owl
-RUN cd /opt/workdir/radamsa && make && make install
+RUN cd /opt/workdir/radamsa && make && make install PREFIX=/opt/radamsa
+RUN ln -s /opt/radamsa/share/man/man1/radamsa.1.gz /usr/share/man/man1/radamsa.1.gz
 
 
