@@ -18,7 +18,7 @@ ng features like running the program and doing crash analysis.
 
 [zzuf][4] is a transparent application input fuzzer which intercepts file and network operations.
 
-Ideally, the above would be an installable RPM, perhaps done via [copr.fedoraproject.org][5]
+Ideally, all of the above would be installable via RPM, perhaps done via [copr.fedoraproject.org][5]. I lack the interest in doing this, however..
 
 What's with the name?
 ---------------------
